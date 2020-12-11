@@ -1,6 +1,8 @@
 const path = require('path')
+const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
+  plugins: [ new MiniCSSExtractPlugin() ],
   entry: './src/app.js', //'./src/playground/hoc.js'
   output: {
     path: path.join(__dirname,'public'),
@@ -14,7 +16,7 @@ module.exports = {
     }, {
       test: /\.s?css$/,
       use: [
-        'style-loader', 
+        MiniCSSExtractPlugin.loader, 
         'css-loader',
         'sass-loader'
       ]
