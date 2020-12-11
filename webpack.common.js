@@ -20,10 +20,4 @@ module.exports = {
       ]
     }]
   },
-  devtool: 'eval-cheap-module-source-map',
-  mode: 'development',
-  devServer: {
-    contentBase: path.join(__dirname,'public'),
-    historyApiFallback: true
-  }
 };
